@@ -17,8 +17,7 @@
         <th>Employee Email</th>  
         <th>Employee Contact</th>  
         <th>Employee Category</th>
-        <th>Male</th>
-        <th>Female</th>
+        <th>Gender</th>
         <th>Actions</th>  
     </tr>  
     </thead>  
@@ -30,8 +29,7 @@
         <td>{{ employee.eemail }}</td>  
         <td>{{ employee.econtact }}</td> 
         <td>{{ employee.category}}</td> 
-        <td>{{employee.male}} </td>
-        <td>{{employee.female}} </td>
+        <td>{{employee.checkgender}} </td>
         <td>  
             <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
             <a href="/delete/{{ employee.id }}">Delete</a>  
