@@ -51,7 +51,7 @@
         <div class="col-sm-4">
           <select name="category" id="id_category">
 
-            {% for i, k in employee.FRUIT_CHOICES %}
+            {% for i, k in employee.CATEGORY_CHOICES %}
 
             <option value="{{i}}">
               {{k}}
@@ -65,9 +65,6 @@
       <div class="form-group row">
         <div class="col-sm-4">
             <p>Previous entered value: &emsp; &emsp; &ensp;
-
-
-
               {{employee.checkgender}}</p>
             <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="MALE" />
             <label for="{{employee.checkgender}} ">MALE</label> <br>

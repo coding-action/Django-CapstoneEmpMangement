@@ -6,5 +6,8 @@ class EmployeeForm(forms.ModelForm):
         model = Employee  
         fields = "__all__" 
         widgets = {
-            'checkgender': forms.RadioSelect()
-        }           
+            'checkgender': forms.RadioSelect(),
+            'dob': forms.SelectDateWidget(years=[x for x in range(1940,2021)]),    
+     
+        }
+       

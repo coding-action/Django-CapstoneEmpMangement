@@ -18,6 +18,8 @@
         <th>Employee Contact</th>  
         <th>Employee Category</th>
         <th>Gender</th>
+        <th>Created</th>
+        <th>Updated</th>
         <th>Actions</th>  
     </tr>  
     </thead>  
@@ -30,8 +32,10 @@
         <td>{{ employee.econtact }}</td> 
         <td>{{ employee.category}}</td> 
         <td>{{employee.checkgender}} </td>
+        <td>{{employee.created_at}} </td>
+        <td>{{employee.updated_at}} </td>
         <td>  
-            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+            <a href="/details/{{ employee.id}} "><span class="glyphicon glyphicon-pencil" > Details </span></a><a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
             <a href="/delete/{{ employee.id }}">Delete</a>  
         </td>  
     </tr>  
