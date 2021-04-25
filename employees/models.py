@@ -14,19 +14,17 @@ class Employee(models.Model):
     gender = (('MALE','MALE'),
          ('FEMALE','FEMALE'),)
 
+    profile_pic = models.ImageField(upload_to='images/',default="")
     eid = models.CharField(max_length=20)  
     ename = models.CharField(max_length=100)  
     eemail = models.EmailField()  
     econtact = models.CharField(max_length=15) 
-    category = models.CharField(max_length=45, choices=CATEGORY_CHOICES, null=True)  
-  
-    #male = models.BooleanField(null=False)
-    #female = models.BooleanField(null=False)
-    dob = models.DateField()
-    address = models.TextField()
+    category = models.CharField(max_length=45, choices=CATEGORY_CHOICES, null=True) 
+    addresses = models.TextField(default="null")
+    dob = models.DateField(default='1990-01-05')
     checkgender = models.CharField(max_length=15,choices=gender, default='MALE')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
     class Meta:  
         db_table = "employee"
 
