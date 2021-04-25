@@ -13,7 +13,6 @@ class Employee(models.Model):
     ]
     gender = (('MALE','MALE'),
          ('FEMALE','FEMALE'),)
-
     profile_pic = models.ImageField(upload_to='images/',default="")
     eid = models.CharField(max_length=20)  
     ename = models.CharField(max_length=100)  
@@ -23,6 +22,8 @@ class Employee(models.Model):
     addresses = models.TextField(default="null")
     dob = models.DateField(default='1990-01-05')
     checkgender = models.CharField(max_length=15,choices=gender, default='MALE')
+    nationality =  models.BooleanField(default='False')
+    salary = models.FloatField(default='00.00')
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     class Meta:  
