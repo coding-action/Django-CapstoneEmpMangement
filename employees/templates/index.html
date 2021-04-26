@@ -46,6 +46,12 @@
         </div>
       </div>
       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Experience:</label>
+        <div class="col-sm-4">
+          {{ form.experience }}
+        </div>
+      </div>
+      <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Name:</label>
         <div class="col-sm-4">
           {{ form.ename }}
@@ -71,17 +77,15 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Employee Category:</label>
+        <label class="col-sm-2 col-form-label">Employee DOB:</label>
         <div class="col-sm-4">
-          {{ form.dob }}
+          <input type="date" name="dob" id="id_dob" value="{{employee.dob}} ">
         </div>
       </div>
-
-
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee address:</label>
         <div class="col-sm-4">
-          {{ form.addresses }}
+          {{ form.address }}
         </div>
       </div>
       <div class="form-group row">

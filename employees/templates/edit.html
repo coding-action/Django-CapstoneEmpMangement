@@ -20,57 +20,96 @@
         <label class="col-sm-1 col-form-label"></label>
         <div class="col-sm-4">
           <h3>Update Details</h3>
+
         </div>
       </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Id:</label>
+        <div class="col-sm-4">
+          <input type="file" name="profile_pic" id="id_profile_pic" maxlength="20" value="{{ employee.profile_pic }}" />
+        </div>
+      </div>
+
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Id:</label>
         <div class="col-sm-4">
           <input type="text" name="eid" id="id_eid" required maxlength="20" value="{{ employee.eid }}" />
         </div>
       </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Experience:</label>
+        <div class="col-sm-4">
+          <input type="text" name="experience" id="id_experience" value="{{ employee.experience }}" />
+        </div>
+      </div>
+
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Name:</label>
         <div class="col-sm-4">
           <input type="text" name="ename" id="id_ename" required maxlength="100" value="{{ employee.ename }}" />
         </div>
       </div>
+
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Email:</label>
         <div class="col-sm-4">
           <input type="email" name="eemail" id="id_eemail" required maxlength="254" value="{{ employee.eemail }}" />
         </div>
       </div>
+
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Contact:</label>
         <div class="col-sm-4">
           <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ employee.econtact }}" />
         </div>
       </div>
+
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee category:</label>
         <div class="col-sm-4">
           <select name="category" id="id_category">
-
             {% for i, k in employee.CATEGORY_CHOICES %}
-
             <option value="{{i}}">
               {{k}}
             </option>
             {% endfor %}
-
           </select>
+        </div>
+      </div>
 
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee DOB:</label>
+        <div class="col-sm-4">
+          <input type="text" name="dob" id="id_dob" value="{{ employee.dob }}" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Address:</label>
+        <div class="col-sm-4">
+          <input type="text" name="address" id="id_address" value="{{ employee.address }}" />
         </div>
       </div>
       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Salary:</label>
         <div class="col-sm-4">
-            <p>Previous entered value: &emsp; &emsp; &ensp;
-              {{employee.checkgender}}</p>
-            <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="MALE" />
-            <label for="{{employee.checkgender}} ">MALE</label> <br>
-            <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="FEMALE" />
-            <label for="{{employee.checkgender}} ">FEMALE</label> <br>
-            <br>
+          <input type="text" name="salary" id="id_salary" value="{{ employee.salary }}" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <p>Previous entered value: &emsp; &emsp; &ensp;
+
+
+
+            {{employee.checkgender}}</p>
+          <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="MALE" />
+          <label for="{{employee.checkgender}} ">MALE</label> <br>
+          <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="FEMALE" />
+          <label for="{{employee.checkgender}} ">FEMALE</label> <br>
+          <br>
         </div>
       </div>
 
@@ -78,6 +117,7 @@
         <label class="col-sm-1 col-form-label"></label>
         <div class="col-sm-4">
           <button type="submit" class="btn btn-success">Update</button>
+        
         </div>
       </div>
     </div>
