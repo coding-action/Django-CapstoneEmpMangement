@@ -22,7 +22,7 @@ def edit(request, id):
     return render(request,'edit.html', {'employee':employee})  
 def update(request, id):  
     employee = Employee.objects.get(id=id)  
-    form = EmployeeForm(request.POST, instance = employee) 
+    form = EmployeeForm(request.POST, request.FILES, instance = employee) 
     if form.is_valid(): 
         form.save() 
         return redirect("/show")  

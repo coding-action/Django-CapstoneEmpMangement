@@ -28,6 +28,7 @@
                 <th>Employee Email</th>
                 <th>Employee Contact</th>
                 <th>Employee Category</th>
+                <th>Indian</th>
                 <th>Gender</th>
                 <th>Created</th>
                 <th>Updated</th>
@@ -37,14 +38,14 @@
         <tbody>
             {% for employee in employees %}
             <tr>
-                <td> <img style="border-radius: 5%;" width="30" height="30" src="{{employee.profile_pic.url}} " alt="">
+                <td> <img style="border-radius: 50%;" width="30" height="30" src="{{employee.profile_pic.url}} " alt="">
                 </td>
                 <td>{{ employee.eid }}</td>
                 <td>{{ employee.ename }}</td>
                 <td>{{ employee.eemail }}</td>
                 <td>{{ employee.econtact }}</td>
                 <td>{{ employee.category}}</td>
-
+                <td>{{employee.nationality}} </td>
                 <td>{{employee.checkgender}} </td>
                 <td>{{employee.created_at}} </td>
                 <td>{{employee.updated_at}} </td>

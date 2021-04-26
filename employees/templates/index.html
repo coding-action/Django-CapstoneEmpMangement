@@ -16,7 +16,7 @@
     <div class="container">
       <br>
       <div class="form-group row">
-        <label class="col-sm-1 col-form-label"></label>
+        <label class="label label-info"></label>
         <div class="col-sm-4">
           <h3>Enter Details</h3>
         </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Experience:</label>
-        <div class="col-sm-4">
+        <div class="form-control form-control-lg">
           {{ form.experience }}
         </div>
       </div>
@@ -62,7 +62,9 @@
         <label class="col-sm-2 col-form-label">Employee Email:</label>
         <div class="col-sm-4">
           {{ form.eemail }}
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
+        
       </div>
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Contact:</label>
