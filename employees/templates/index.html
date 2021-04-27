@@ -7,18 +7,18 @@
   {% load static %}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
 </head>
 
-<body>
+<body style=" border: 10px solid rgb(7, 235, 252);">
   <form method="POST" class="post-form" action="/emp" enctype="multipart/form-data" >
     {% csrf_token %}
-    <div class="container">
+    <div  " class="container">
       <br>
       <div class="form-group row">
         <label class="label label-info"></label>
-        <div class="col-sm-4">
-          <h3>Enter Details</h3>
+        <div style="text-align:center" class="col-sm-4">
+          <h3 s>Enter Details</h3>
         </div>
       </div>
       <div class="form-group row">
@@ -28,26 +28,26 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Employee Id:</label>
+        <label class="col-sm-2 col-form-label" >Employee Id:</label>
         <div class="col-sm-4">
           {{ form.eid }}
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Employee Nationality:</label>
+        <label class="col-sm-2 col-form-label">Indian: </label>
         <div class="col-sm-4">
           {{ form.nationality }}
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Employee Salary:</label>
-        <div class="col-sm-4">
+        <label class="col-sm-2 col-form-label" >Employee Salary:</label>
+        <div class="col-sm-4" style="box-sizing: inherit;">
           {{ form.salary }}
         </div>
       </div>
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Employee Experience:</label>
-        <div class="form-control form-control-lg">
+        <div class="col-sm-4">
           {{ form.experience }}
         </div>
       </div>

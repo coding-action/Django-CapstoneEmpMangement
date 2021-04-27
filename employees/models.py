@@ -8,11 +8,11 @@ class Employee(models.Model):
     ('HR Management Software', 'HR Management Software'),
     ('Cloud & SaaS', 'Cloud & SaaS'),
     ('CMMS Software', 'CMMS Software'),
-    ('Telecommunications Management', 'Telecommunications Management'),
+    ('Telecomm Management', 'Telecommunications Management'),
     ('ERP Software', 'ERP Software')
     ]
-    gender = (('MALE','MALE'),
-         ('FEMALE','FEMALE'),)
+    gender = (('Male','MALE'),
+         ('Female','FEMALE'),)
     profile_pic = models.ImageField(upload_to='images/',default="")
     eid = models.CharField(max_length=20)  
     ename = models.CharField(max_length=100)  
@@ -22,7 +22,7 @@ class Employee(models.Model):
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, null=True) 
     address = models.TextField(default="null")
     dob = models.CharField(max_length=100)
-    checkgender = models.CharField(max_length=15,choices=gender, default='MALE')
+    checkgender = models.CharField(max_length=15,choices=gender, default='M')
     nationality =  models.BooleanField()
     salary = models.FloatField(default='00.00')
     created_at = models.DateTimeField(auto_now_add=True, null=True)

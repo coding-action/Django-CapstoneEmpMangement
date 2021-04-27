@@ -7,10 +7,10 @@
   {% load static %}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
 </head>
 
-<body>
+<body style=" border: 10px solid rgb(252, 248, 7);">
 
   <form method="POST" class="post-form" action="/update/{{employee.id}}" enctype="multipart/form-data">
     {% csrf_token %}
@@ -101,14 +101,11 @@
       <div class="form-group row">
         <div class="col-sm-4">
           <p>Previous entered value: &emsp; &emsp; &ensp;
-
-
-
             {{employee.checkgender}}</p>
-          <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="MALE" />
-          <label for="{{employee.checkgender}} ">MALE</label> <br>
-          <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="FEMALE" />
-          <label for="{{employee.checkgender}} ">FEMALE</label> <br>
+          <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="Male" />
+          <label >MALE</label> <br>
+          <input type="radio" name="checkgender" id="id_checkgender" maxlength="15" value="Female" />
+          <label >FEMALE</label> <br>
           <br>
         </div>
       </div>
@@ -118,6 +115,7 @@
           <input type="checkbox" name="nationality" id="id_nationality" value="True" />
         </div>
       </div>
+
       <div class="form-group row">
         <label class="col-sm-1 col-form-label"></label>
         <div class="col-sm-4">
