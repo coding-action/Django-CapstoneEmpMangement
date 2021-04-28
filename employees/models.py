@@ -17,7 +17,7 @@ class Employee(models.Model):
     eid = models.CharField(max_length=20)  
     ename = models.CharField(max_length=100)  
     eemail = models.EmailField()  
-    econtact = models.CharField(max_length=15) 
+    econtact = models.CharField(max_length=10) 
     experience = models.IntegerField(default='0')
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, null=True) 
     address = models.TextField(default="null")

@@ -18,15 +18,16 @@ from django.urls import path
 from employees import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from employees.views import emp, show, edit, update, details, destroy
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('emp', views.emp),  
-    path('show',views.show),  
-    path('edit/<int:id>', views.edit),  
-    path('update/<int:id>', views.update),  
-    path('delete/<int:id>', views.destroy), 
-    path('details/<int:id>', views.details),
+    path('', emp.as_view()),  
+    path('emp', emp.as_view()),  
+    path('show', show.as_view()),  
+    path('edit/<int:id>', edit.as_view()),  
+    path('update/<int:id>', update.as_view()),  
+    path('delete/<int:id>', destroy.as_view()), 
+    path('details/<int:id>', details.as_view()),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
